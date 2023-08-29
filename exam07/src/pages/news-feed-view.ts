@@ -41,8 +41,10 @@ export default class NewsFeedView extends View {
 	
 	render = (page : string = '1'): void => {
 		// window.store.currentPage = Number(location.hash.substring(7)); 
+		console.log(page);
 		this.store.currentPage = Number(page);
 
+		
 		for(let i = (this.store.currentPage - 1) * 10; i < this.store.currentPage * 10; i++) {
 
 			const { id, title, comments_count, user, points, time_ago, read } = this.store.getFeed(i);

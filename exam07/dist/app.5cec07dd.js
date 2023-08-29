@@ -416,6 +416,7 @@ var NewsFeedView = /** @class */function (_super) {
         page = '1';
       }
       // window.store.currentPage = Number(location.hash.substring(7)); 
+      console.log(page);
       _this.store.currentPage = Number(page);
       for (var i = (_this.store.currentPage - 1) * 10; i < _this.store.currentPage * 10; i++) {
         var _a = _this.store.getFeed(i),
@@ -602,7 +603,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59382" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56750" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
